@@ -6,19 +6,19 @@
 ![GitHub Repo stars](https://img.shields.io/github/stars/MaxGripe/repository-template)
 
 
-# Template Repository
+# Koji Stream Player
 
-This repository serves as a template for starting new projects.
+A simple console-based program to play audio streams.
+This is experimental, initial commit. Not ready for use. Please wait for a first release.
 
 ## Features
 
-- Easy setup
-- Customizable configurations
-- Some popular badges already in place
+- Lightweight and easy to use
+- Console-based
 
 ## Getting started
 
-To use this template, select it from the **Repository template** dropdown when creating a new repository.
+Run the executable and provide the URL of the stream you want to play.
 
 ## License
 
