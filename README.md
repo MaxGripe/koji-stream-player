@@ -1,4 +1,5 @@
 
+![Workflow Status](https://github.com/MaxGripe/jpg-white-border-adder/actions/workflows/dotnet.yml/badge.svg)
 ![GitHub repo size](https://img.shields.io/github/repo-size/MaxGripe/repository-template)
 ![GitHub License](https://img.shields.io/github/license/MaxGripe/repository-template)
 ![GitHub Created At](https://img.shields.io/github/created-at/MaxGripe/repository-template)
