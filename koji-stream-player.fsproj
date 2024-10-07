@@ -5,6 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>koji_stream_player</RootNamespace>
     <PublishAot>true</PublishAot>
+    <PublishSingleFile>true</PublishSingleFile>
   </PropertyGroup>
 
   <ItemGroup>
