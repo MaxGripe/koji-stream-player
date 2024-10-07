@@ -4,6 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net8.0</TargetFramework>
     <RootNamespace>koji_stream_player</RootNamespace>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
   <ItemGroup>
