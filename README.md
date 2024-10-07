@@ -1,10 +1,10 @@
 
 ![Workflow Status](https://github.com/MaxGripe/koji-stream-player/actions/workflows/dotnet.yml/badge.svg)
-![GitHub repo size](https://img.shields.io/github/repo-size/MaxGripe/repository-template)
-![GitHub License](https://img.shields.io/github/license/MaxGripe/repository-template)
-![GitHub Created At](https://img.shields.io/github/created-at/MaxGripe/repository-template)
-![GitHub forks](https://img.shields.io/github/forks/MaxGripe/repository-template)
-![GitHub Repo stars](https://img.shields.io/github/stars/MaxGripe/repository-template)
+![GitHub repo size](https://img.shields.io/github/repo-size/MaxGripe/koji-stream-player)
+![GitHub License](https://img.shields.io/github/license/MaxGripe/koji-stream-player)
+![GitHub Created At](https://img.shields.io/github/created-at/MaxGripe/koji-stream-player)
+![GitHub forks](https://img.shields.io/github/forks/MaxGripe/koji-stream-player)
+![GitHub Repo stars](https://img.shields.io/github/stars/MaxGripe/koji-stream-player)
 
 # Koji Stream Player
 
