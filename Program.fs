@@ -97,5 +97,4 @@ let main argv =
     Console.Write("Please enter stream address or [q] to quit: ")
 
     awaitingUrl ()
-
     0
