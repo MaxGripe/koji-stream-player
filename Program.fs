@@ -8,17 +8,17 @@ let clearLines () =
 let availableCommands = "Commands: [0..100] for volume, [q] to quit: "
 let urlPrompt = "Please enter stream address (in http:// format) or [q] to quit: "
 
+let isValidUrl (url: string) =
+    url.StartsWith("http://")
+    || url.StartsWith("https://")
+
 let rec awaitingUrl () =
     let url = Console.ReadLine()
     clearLines ()
 
     match url with
     | "q" -> exit 0
-    | s when
-        s.StartsWith("http://")
-        || s.StartsWith("https://")
-        ->
-        playStream (url)
+    | s when isValidUrl s -> playStream (url)
     | _ ->
         clearLines ()
         Console.WriteLine("Last command entered: {0}", url)
@@ -77,7 +77,7 @@ and playStream (url: string) =
 
 [<EntryPoint>]
 let main argv =
-    System.Console.Clear()
+    Console.Clear()
     Console.WriteLine("╔══════════════════════════════════════════════════════════════════════════════╗")
     Console.WriteLine("║         ░░░░░░  ▄█▒░░     ▄▄█▀▀   ▄▄█▓▓▓▄ ░░░░░    ▄▓▓▓▓▓▓▓▓█▀    ░░░░░     ░║")
     Console.WriteLine("║        ░░░░░  ▄█▓▒▒    ▄▄█▓▒    ▄█▓▓▒▒▒▓▓▄ ░░   ░▓▓▓▓▓▓▓▓▓░░    ░░░░░  ▓▓█  ░║")
@@ -96,5 +96,11 @@ let main argv =
     Console.WriteLine("")
     Console.Write("Please enter stream address or [q] to quit: ")
 
+    argv
+    |> Array.tryHead
+    |> Option.filter isValidUrl
+    |> Option.iter playStream
+
     awaitingUrl ()
+
     0
