@@ -5,16 +5,17 @@
 ![GitHub Created At](https://img.shields.io/github/created-at/MaxGripe/koji-stream-player)
 ![GitHub forks](https://img.shields.io/github/forks/MaxGripe/koji-stream-player)
 ![GitHub Repo stars](https://img.shields.io/github/stars/MaxGripe/koji-stream-player)
+![OS](https://img.shields.io/badge/os-Windows_%7C_macOS-blue)
 
 # Koji Stream Player
 
 ![Koji](gfx/koji.png)
 
-A simple console-based program to play audio streams.
+A simple console-based program to play audio streams for Windows and macOS
 
 ## Features
 
-- Lightweight and easy to use
+- Easy to use
 - Volume control
 - Console-based
 

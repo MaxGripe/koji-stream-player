@@ -1,28 +1,65 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
- <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>koji_stream_player</RootNamespace>
-    <PublishSingleFile>true</PublishSingleFile>
-    <PublishReadyToRun>false</PublishReadyToRun>
-    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
-    <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
-    <InvariantGlobalization>true</InvariantGlobalization>
-    <UseSystemResourceKey>true</UseSystemResourceKey>
-    <NullabilityInfoContextSupport>false</NullabilityInfoContextSupport>
-    <IlcDisableReflection>true</IlcDisableReflection>
-    <StackTraceSupport>true</StackTraceSupport>
-    <OptimizationPreference>Size</OptimizationPreference>
-    <DebugType>none</DebugType>
-  </PropertyGroup>
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net9.0</TargetFramework>
+        <RootNamespace>koji_stream_player</RootNamespace>
+        <PublishSingleFile>true</PublishSingleFile>
+        <PublishReadyToRun>false</PublishReadyToRun>
+        <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+        <EnableCompressionInSingleFile>true</EnableCompressionInSingleFile>
+        <InvariantGlobalization>true</InvariantGlobalization>
+        <PublishTrimmed>true</PublishTrimmed>
+        <TrimmerRemoveSymbols>true</TrimmerRemoveSymbols>
+        <DebuggerSupport>false</DebuggerSupport>
+        <EnableUnsafeBinaryFormatterSerialization>false</EnableUnsafeBinaryFormatterSerialization>
+        <EnableUnsafeUTF7Encoding>false</EnableUnsafeUTF7Encoding>
+        <EventSourceSupport>false</EventSourceSupport>
+        <HttpActivityPropagationSupport>false</HttpActivityPropagationSupport>
+        <MetadataUpdaterSupport>false</MetadataUpdaterSupport>
+        <MetricsSupport>false</MetricsSupport>
+        <StackTraceSupport>false</StackTraceSupport>
+        <NullabilityInfoContextSupport>false</NullabilityInfoContextSupport>
+        <UseSystemResourceKeys>false</UseSystemResourceKeys>
+        <IlcDisableReflection>true</IlcDisableReflection>
+        <IlcGenerateCompleteTypeMetadata>false</IlcGenerateCompleteTypeMetadata>
+        <IlcOptimizeAssembly>true</IlcOptimizeAssembly>
+        <XmlResolverIsNetworkingEnabledByDefault>false</XmlResolverIsNetworkingEnabledByDefault>
+        <WarningLevel>0</WarningLevel>
+        <DebugType>none</DebugType>
+        <OptimizationPreference>Size</OptimizationPreference>
+        <SelfContained>true</SelfContained>
+        <EnableDynamicCode>false</EnableDynamicCode>
+        <EnableRuntimeMarshalling>false</EnableRuntimeMarshalling>
+        <UseSystemResourceKeys>false</UseSystemResourceKeys>
+        <EventSourceSupport>false</EventSourceSupport>
+        <MetadataUpdaterSupport>false</MetadataUpdaterSupport>
+        <StackTraceSupport>false</StackTraceSupport>
+        <NullabilityInfoContextSupport>false</NullabilityInfoContextSupport>
+        <StripSymbols>true</StripSymbols>
+        <Configuration>Release</Configuration>
+        <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+        <Optimize>true</Optimize>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="Program.fs" />
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Include="Program.fs" />
+    </ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="NAudio" Version="2.2.1" />
-  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="LibVLCSharp" Version="3.9.1" />
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(RuntimeIdentifier)' == 'osx-arm64'">
+        <Content Include="lib\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
+
+    <ItemGroup Condition="'$(RuntimeIdentifier)' == 'win-x64'">
+        <Content Include="libvlc\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </Content>
+    </ItemGroup>
 
 </Project>
