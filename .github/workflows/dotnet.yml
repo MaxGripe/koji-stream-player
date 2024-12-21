@@ -61,11 +61,13 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: win-x64-artifact
+          path: output/win-x64/
 
       - name: Download macOS Artifact
         uses: actions/download-artifact@v3
         with:
           name: osx-arm64-artifact
+          path: output/osx-arm64/
 
       - name: Create GitHub Release and Upload Artifacts
         uses: softprops/action-gh-release@v2
