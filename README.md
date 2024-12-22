@@ -13,14 +13,6 @@
 
 A simple console-based program to play audio streams for Windows and macOS
 
-## Features
-
-- Easy to use
-- Volume control
-- Console-based
-
-![Koji](gfx/terminal.png)
-
 ## Getting started
 
 Run the executable and provide the URL of the stream you want to play, for example:
@@ -32,6 +24,26 @@ or
 `http://ice.bassdrive.net:80/stream32`
 
 That's it!
+
+## Features
+
+- Easy to use
+- Volume control
+- Console-based
+
+![Koji on Windows](gfx/terminal.png)
+
+![Koji on macOS](gfx/zsh.png)
+
+## Additional info for Mac users:
+
+Koji only works on Apple Silicon processors and has been tested on an M1 running 
+macOS Sequoia 15.2. Since I don't want to pay the ransom to greedy Apple for the 
+"Apple Developer Program", if you want to run it after downloading, you'll 
+unfortunately need to manually allow it in "Privacy & Security" 
+(your Mac will insist on deleting :)
+
+![Gatekeeper](gfx/gatekeeper.png)
 
 ## Support
 
