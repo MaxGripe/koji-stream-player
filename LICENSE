@@ -22,14 +22,3 @@ ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
 OTHER DEALINGS IN THE SOFTWARE.
 
 For more information, please refer to <https://unlicense.org>
-
-----
-
-MEGA IMPORTANT LICENSE INFORMATION (for people who care about this kind of nonsense):
-
-This software uses some fancy third-party stuff like:
-"libVLC" and "LibVLCSharp", both under LGPL-something.
-Want to know more about their licenses? Go read their sites, it's all there.
-
-These licenses are their thing, not mine.
-This software is proudly released under the Unlicense. You're welcome.

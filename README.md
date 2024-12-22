@@ -49,6 +49,11 @@ unfortunately need to manually allow it in "Privacy & Security"
 
 If possible, please support the radio station you are listening to! :)
 
-## License
+### MEGA IMPORTANT LICENSE INFORMATION (for people who care about this kind of nonsense)
 
-This project is released under the [Unlicense](LICENSE) license.
+This software uses some fancy third-party stuff like:
+"libVLC" and "LibVLCSharp", both under LGPL-something.
+Want to know more about their licenses? Go read their sites, it's all there.
+
+These licenses are their thing, not mine.
+This software is proudly released under the [Unlicense](LICENSE). You're welcome.
