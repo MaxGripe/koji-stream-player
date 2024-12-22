@@ -46,6 +46,10 @@ jobs:
         run: |
           dotnet publish --runtime osx-arm64 -c Release -o "output/osx-arm64"
 
+      - name: Ad-hoc Code Signing
+        run: |
+          codesign --deep --force --verify --sign - output/osx-arm64/koji-stream-player
+
       - name: Upload macOS Artifact
         uses: actions/upload-artifact@v3
         with:
@@ -68,10 +72,6 @@ jobs:
         with:
           name: osx-arm64-artifact
           path: output/osx-arm64/
-
-      - name: Ad-hoc Code Signing
-        run: |
-          codesign --deep --force --verify --sign - output/osx-arm64/koji-stream-player
 
       - name: Create GitHub Release and Upload Artifacts
         uses: softprops/action-gh-release@v2
