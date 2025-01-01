@@ -25,7 +25,7 @@ jobs:
           dotnet publish --runtime win-x64 -c Release -o "output/win-x64"
 
       - name: Upload Windows Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: win-x64-artifact
           path: output/win-x64/koji-stream-player.exe
@@ -51,7 +51,7 @@ jobs:
           codesign --deep --force --verify --sign - output/osx-arm64/koji-stream-player
 
       - name: Upload macOS Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: osx-arm64-artifact
           path: output/osx-arm64/koji-stream-player
