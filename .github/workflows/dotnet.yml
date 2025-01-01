@@ -62,13 +62,13 @@ jobs:
     needs: [build-windows, build-macos]
     steps:
       - name: Download Windows Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: win-x64-artifact
           path: output/win-x64/
 
       - name: Download macOS Artifact
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: osx-arm64-artifact
           path: output/osx-arm64/
