@@ -47,7 +47,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="LibVLCSharp" Version="3.9.1" />
+        <PackageReference Include="LibVLCSharp" Version="3.9.2" />
     </ItemGroup>
 
     <ItemGroup Condition="'$(RuntimeIdentifier)' == 'osx-arm64'">
